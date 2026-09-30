@@ -1,5 +1,10 @@
 # CarbonPDF: A QA Dataset for Component-Level Carbon Footprint of Electronic Devices
 
+- Dataset paper: [An electronic product carbon footprint dataset for question answering](https://www.nature.com/articles/s41597-026-06544-5) (*Scientific Data*, 2026)
+- Method paper: [Extracting Product Carbon Footprint in PDF Documents using Question Answering Framework](https://dl.acm.org/doi/10.1145/3744255.3798128) (E-Energy '26)
+- Data: [CarbonPDF on AWS](https://registry.opendata.aws/carbonpdf/)
+- Repository: [pittcps/carbonpdf-dataset](https://github.com/pittcps/carbonpdf-dataset)
+
 The embodied carbon of computing systems constitutes a significant portion of their overall greenhouse gas (GHG) emissions. As part of their environmental initiatives and compliance with evolving standards, many companies now disclose the carbon footprints of their products in sustainability reports, often providing a detailed breakdown. However, these reports are typically presented in diverse and unstructured formats, such as text, tables, and graphs embedded in PDF documents. This lack of standardization creates significant challenges in extracting and analyzing component-specific emissions data, limiting comparative assessments and opportunities for targeted carbon reductions.
 To address these challenges, we introduce a carbon question-answering (QA) dataset specifically designed to facilitate the extraction and analysis of data from real-world carbon reports of computing products. The dataset features annotated metadata, a variety of numerical reasoning tasks, and structured derivations to ensure accurate processing of fragmented and inconsistent information. This work lays a foundation for training advanced language models to automate the aggregation and standardization of emissions data, enabling deeper analysis and integration into downstream applications, such as carbon analysis tools, to assess and optimize the carbon footprint of Information and Communication Technology (ICT) systems.
 
@@ -197,3 +202,37 @@ The `codes` directory includes scripts organized into subdirectories, each named
   - *{company name}.py* generates programs using templates.  
   - *{company name}_gt.py* extracts ground truth answers from *products.csv*.  
   - *{company name}_exec.py* executes the generated programs, comparing results with ground truth to verify program correctness.
+
+## Citation
+
+If you use the CarbonPDF-QA data, please cite the *Scientific Data* paper. If you use the question-answering method, please also cite the E-Energy paper.
+
+```bibtex
+@inproceedings{zhao2026carbonpdf,
+  author = {Zhao, Kaiwen and Balaji, Bharathan and Lee, Stephen},
+  title = {Extracting Product Carbon Footprint in PDF Documents using Question Answering Framework},
+  year = {2026},
+  isbn = {9798400720116},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3744255.3798128},
+  doi = {10.1145/3744255.3798128},
+  booktitle = {Proceedings of the 17th ACM International Conference on Future and Sustainable Energy Systems},
+  pages = {584--596},
+  numpages = {13},
+  keywords = {Information retrieval, Question answering},
+  series = {E-Energy '26}
+}
+
+@article{zhao2026carbonpdfqa,
+  author = {Zhao, Kaiwen and Koyatan Chathoth, Ajesh and Balaji, Bharathan and Lee, Stephen},
+  title = {An electronic product carbon footprint dataset for question answering},
+  journal = {Scientific Data},
+  year = {2026},
+  volume = {13},
+  number = {1},
+  pages = {228},
+  doi = {10.1038/s41597-026-06544-5},
+  url = {https://doi.org/10.1038/s41597-026-06544-5}
+}
+```
